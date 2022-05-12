@@ -1,0 +1,280 @@
+**
+** Disassembly for section '.init'
+**
+
+
+000003a0 <_init>:
+     3a0:  push ebx
+     3a1:  sub esp, 0x8
+     3a4:  call 450
+     3a9:  add ebx, 0x1c2f
+     3af:  mov eax, DWORD PTR [ebx+0x1c]
+     3b5:  test eax, eax
+     3b7:  je 3be
+     3b9:  call 408
+     3be:  add esp, 0x8
+     3c1:  pop ebx
+     3c2:  ret
+
+
+**
+** Disassembly for section '.plt'
+**
+
+     3d0:  push DWORD PTR [ebx+0x4]
+     3d6:  jmp DWORD PTR [ebx+0x8]
+     3dc:  add BYTE PTR [eax], al
+     3de:  add BYTE PTR [eax], al
+     3e0:  jmp DWORD PTR [ebx+0xc]
+     3e6:  push 0x0
+     3eb:  jmp 3d0
+     3f0:  jmp DWORD PTR [ebx+0x10]
+     3f6:  push 0x8
+     3fb:  jmp 3d0
+
+
+**
+** Disassembly for section '.plt.got'
+**
+
+     400:  jmp DWORD PTR [ebx+0x18]
+     406:  xchg ax, ax
+     408:  jmp DWORD PTR [ebx+0x1c]
+     40e:  xchg ax, ax
+
+
+**
+** Disassembly for section '.text'
+**
+
+
+00000410 <_start>:
+     410:  xor ebp, ebp
+     412:  pop esi
+     413:  mov ecx, esp
+     415:  and esp, 0xf0
+     418:  push eax
+     419:  push esp
+     41a:  push edx
+     41b:  call 442
+     420:  add ebx, 0x1bb8
+     426:  lea eax, [ebx-0x19a8]
+     42c:  push eax
+     42d:  lea eax, [ebx-0x1a08]
+     433:  push eax
+     434:  push ecx
+     435:  push esi
+     436:  push DWORD PTR [ebx+0x20]
+     43c:  call 3f0
+     441:  hlt
+     442:  mov ebx, DWORD PTR [esp]
+     445:  ret
+     446:  xchg ax, ax
+     448:  xchg ax, ax
+     44a:  xchg ax, ax
+     44c:  xchg ax, ax
+     44e:  xchg ax, ax
+
+00000450 <__x86.get_pc_thunk.bx>:
+     450:  mov ebx, DWORD PTR [esp]
+     453:  ret
+     454:  xchg ax, ax
+     456:  xchg ax, ax
+     458:  xchg ax, ax
+     45a:  xchg ax, ax
+     45c:  xchg ax, ax
+     45e:  xchg ax, ax
+
+00000460 <deregister_tm_clones>:
+     460:  call 549
+     465:  add edx, 0x1b73
+     46b:  lea ecx, [edx+0x30]
+     471:  lea eax, [edx+0x30]
+     477:  cmp eax, ecx
+     479:  je 498
+     47b:  mov eax, DWORD PTR [edx+0x14]
+     481:  test eax, eax
+     483:  je 498
+     485:  push ebp
+     486:  mov ebp, esp
+     488:  sub esp, 0x14
+     48b:  push ecx
+     48c:  call eax
+     48e:  add esp, 0x10
+     491:  leave
+     492:  ret
+     493:  nop
+     494:  lea esi, [esi]
+     498:  repz ret
+     49a:  lea esi, [esi]
+
+000004a0 <register_tm_clones>:
+     4a0:  call 549
+     4a5:  add edx, 0x1b33
+     4ab:  push ebp
+     4ac:  lea ecx, [edx+0x30]
+     4b2:  lea eax, [edx+0x30]
+     4b8:  sub eax, ecx
+     4ba:  mov ebp, esp
+     4bc:  push ebx
+     4bd:  sar eax, 0x2
+     4c0:  mov ebx, eax
+     4c2:  sub esp, 0x4
+     4c5:  shr ebx, 0x1f
+     4c8:  add eax, ebx
+     4ca:  sar eax, 1
+     4cc:  je 4e2
+     4ce:  mov edx, DWORD PTR [edx+0x24]
+     4d4:  test edx, edx
+     4d6:  je 4e2
+     4d8:  sub esp, 0x8
+     4db:  push eax
+     4dc:  push ecx
+     4dd:  call edx
+     4df:  add esp, 0x10
+     4e2:  mov ebx, DWORD PTR [ebp-0x4]
+     4e5:  leave
+     4e6:  ret
+     4e7:  mov esi, esi
+     4e9:  lea edi, [edi]
+
+000004f0 <__do_global_dtors_aux>:
+     4f0:  push ebp
+     4f1:  mov ebp, esp
+     4f3:  push ebx
+     4f4:  call 450
+     4f9:  add ebx, 0x1adf
+     4ff:  sub esp, 0x4
+     502:  cmp BYTE PTR [ebx+0x30], 0x0
+     509:  jne 532
+     50b:  mov eax, DWORD PTR [ebx+0x18]
+     511:  test eax, eax
+     513:  je 526
+     515:  sub esp, 0xc
+     518:  push DWORD PTR [ebx+0x2c]
+     51e:  call 400
+     523:  add esp, 0x10
+     526:  call 460
+     52b:  mov BYTE PTR [ebx+0x30], 0x1
+     532:  mov ebx, DWORD PTR [ebp-0x4]
+     535:  leave
+     536:  ret
+     537:  mov esi, esi
+     539:  lea edi, [edi]
+
+00000540 <frame_dummy>:
+     540:  push ebp
+     541:  mov ebp, esp
+     543:  pop ebp
+     544:  jmp 4a0
+
+00000549 <__x86.get_pc_thunk.dx>:
+     549:  mov edx, DWORD PTR [esp]
+     54c:  ret
+
+0000054d <main>:
+     54d:  lea ecx, [esp+0x4]
+     551:  and esp, 0xf0
+     554:  push DWORD PTR [ecx-0x4]
+     557:  push ebp
+     558:  mov ebp, esp
+     55a:  push ecx
+     55b:  sub esp, 0x114
+     561:  call 5c8
+     566:  add eax, 0x1a72
+     56b:  mov ecx, DWORD PTR gs:0x14
+     572:  mov DWORD PTR [ebp-0xc], ecx
+     575:  xor ecx, ecx
+     577:  mov DWORD PTR [ebp-0x110], 0x0
+     581:  jmp 59d
+     583:  mov edx, DWORD PTR [ebp-0x110]
+     589:  fld DWORD PTR [eax-0x1968]
+     58f:  fstp DWORD PTR [ebp+edx*4-0x10c]
+     596:  add DWORD PTR [ebp-0x110], 0x1
+     59d:  cmp DWORD PTR [ebp-0x110], 0x3f
+     5a4:  jle 583
+     5a6:  mov eax, 0x0
+     5ab:  mov ecx, DWORD PTR [ebp-0xc]
+     5ae:  xor ecx, DWORD PTR gs:0x14
+     5b5:  je 5bc
+     5b7:  call 640
+     5bc:  add esp, 0x114
+     5c2:  pop ecx
+     5c3:  pop ebp
+     5c4:  lea esp, [ecx-0x4]
+     5c7:  ret
+
+000005c8 <__x86.get_pc_thunk.ax>:
+     5c8:  mov eax, DWORD PTR [esp]
+     5cb:  ret
+     5cc:  xchg ax, ax
+     5ce:  xchg ax, ax
+
+000005d0 <__libc_csu_init>:
+     5d0:  push ebp
+     5d1:  push edi
+     5d2:  push esi
+     5d3:  push ebx
+     5d4:  call 450
+     5d9:  add ebx, 0x19ff
+     5df:  sub esp, 0xc
+     5e2:  mov ebp, DWORD PTR [esp+0x28]
+     5e6:  lea esi, [ebx-0xfc]
+     5ec:  call 3a0
+     5f1:  lea eax, [ebx-0x100]
+     5f7:  sub esi, eax
+     5f9:  sar esi, 0x2
+     5fc:  test esi, esi
+     5fe:  je 625
+     600:  xor edi, edi
+     602:  lea esi, [esi]
+     608:  sub esp, 0x4
+     60b:  push ebp
+     60c:  push DWORD PTR [esp+0x2c]
+     610:  push DWORD PTR [esp+0x2c]
+     614:  call DWORD PTR [ebx+edi*4-0x100]
+     61b:  add edi, 0x1
+     61e:  add esp, 0x10
+     621:  cmp esi, edi
+     623:  jne 608
+     625:  add esp, 0xc
+     628:  pop ebx
+     629:  pop esi
+     62a:  pop edi
+     62b:  pop ebp
+     62c:  ret
+     62d:  lea esi, [esi]
+
+00000630 <__libc_csu_fini>:
+     630:  repz ret
+     632:  xchg ax, ax
+     634:  xchg ax, ax
+     636:  xchg ax, ax
+     638:  xchg ax, ax
+     63a:  xchg ax, ax
+     63c:  xchg ax, ax
+     63e:  xchg ax, ax
+
+00000640 <__stack_chk_fail_local>:
+     640:  push ebx
+     641:  call 450
+     646:  add ebx, 0x1992
+     64c:  sub esp, 0x8
+     64f:  call 3e0
+
+
+**
+** Disassembly for section '.fini'
+**
+
+
+00000654 <_fini>:
+     654:  push ebx
+     655:  sub esp, 0x8
+     658:  call 450
+     65d:  add ebx, 0x197b
+     663:  add esp, 0x8
+     666:  pop ebx
+     667:  ret
+
+
